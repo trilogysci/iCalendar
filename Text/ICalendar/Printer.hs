@@ -435,7 +435,7 @@ instance IsProperty TimeTransparency where
                         printValue x
 
 instance IsProperty URL where
-    printProperty URL {..} = ln $ prop "URL" urlOther >> printShow urlValue
+    printProperty URL {..} = ln $ prop "URL" urlOther >> text urlValue
 
 instance IsProperty RecurrenceId where
     printProperty r = ln $ prop "RECURRENCE-ID" r >> printValue r
